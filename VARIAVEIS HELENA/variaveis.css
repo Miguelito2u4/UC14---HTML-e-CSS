@@ -1,0 +1,44 @@
+:root {
+--cor-primaria:blue;
+--cor-segundaria: pink;
+--cor-fundo: black;
+--cor-texto: gray;
+--cor-branca: white;
+
+--fonte-principal: Arial, sans-sarif;
+
+--borda-radius:10px;
+--sombra:0 4px 10px #000000;
+
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+
+}
+
+.caixa {
+    background-color: var(--cor-branca);
+    padding: 30px
+}
+
+button{
+    background-color: var(--cor-fundo);
+    color: azure;
+    border:none ;
+    padding: 10px 20px;
+    border-radius:var(--borda-radius);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--cor-fundo);
+}
