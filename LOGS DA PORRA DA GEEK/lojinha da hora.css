@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: #0d0d0d;
+    color: white;
+}
+
+header h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 30px;
+    letter-spacing: 3px;
+}
+
+.descricao{
+    margin-top: 15px;
+    color: #cfcfcf;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.zone{
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0;
+}
+
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.pesquisa input{
+    width: 350px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+}
+
+.pesquisa button{
+    padding: 12px 20px;
+    border: none;
+    background: #FFD700;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    font-size: 1rem;
+}
+
+.produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.card{
+    background: #1a1a1a;
+    width: 260px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255,215,0,0.5);
+}
+
+.card img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3{
+    margin: 15px 0;
+}
+
+.card p{
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.card button{
+    background: #FFD700;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card button:hover{
+    background: white;
+    transform: scale(1.05);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+footer{
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer h3{
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+footer p{
+    color: white;
+}
