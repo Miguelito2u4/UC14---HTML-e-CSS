@@ -1,0 +1,279 @@
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #dddddd;
+    --border-color: #444444;
+    --focus-ring: #ffea00;
+    --card-bg: #2a2a2a;
+    
+    --cat-nao-metal: #2d5a88;
+    --cat-gas-nobre: #5c3c88;
+    --cat-alcalino: #883c3c;
+    --cat-alcalino-terreo: #885c3c;
+    --cat-semimetal: #3c887d;
+    --cat-halogenio: #3c8848;
+    --cat-transicao: #706828;
+    --cat-pos-transicao: #4a627a;
+    --cat-lantanideo: #883c68;
+    --cat-actinideo: #883c50;
+}
+
+body.theme-high-contrast-yellow {
+    --bg-primary: #000000;
+    --bg-secondary: #000000;
+    --text-primary: #ffff00;
+    --text-secondary: #ffffff;
+    --border-color: #ffff00;
+    --focus-ring: #ffffff;
+    --card-bg: #000000;
+    --cat-nao-metal: #000000;
+    --cat-gas-nobre: #000000;
+    --cat-alcalino: #000000;
+    --cat-alcalino-terreo: #000000;
+    --cat-semimetal: #000000;
+    --cat-halogenio: #000000;
+    --cat-transicao: #000000;
+    --cat-pos-transicao: #000000;
+    --cat-lantanideo: #000000;
+    --cat-actinideo: #000000;
+}
+
+body.theme-high-contrast-white {
+    --bg-primary: #000000;
+    --bg-secondary: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --border-color: #ffffff;
+    --focus-ring: #ffff00;
+    --card-bg: #000000;
+}
+
+body.theme-light {
+    --bg-primary: #f4f4f9;
+    --bg-secondary: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #333333;
+    --border-color: #cccccc;
+    --focus-ring: #0056b3;
+    --card-bg: #ffffff;
+}
+
+body.font-normal { font-size: 16px; }
+body.font-large { font-size: 20px; }
+body.font-xlarge { font-size: 24px; }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.app-header h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.accessibility-bar {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    font-weight: bold;
+}
+
+select, input {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.btn-group button, .action-btn {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    padding: 8px 16px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-group button:hover, .action-btn:hover, select:hover, input:hover {
+    outline: 3px solid var(--focus-ring);
+}
+
+:focus {
+    outline: 4px solid var(--focus-ring) !important;
+    outline-offset: 2px;
+}
+
+.legend-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.legend-item {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.table-container {
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.periodic-grid {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(65px, 1fr));
+    gap: 6px;
+    min-width: 1200px;
+}
+
+.element-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    padding: 6px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    user-select: none;
+}
+
+.element-card:hover, .element-card:focus {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.element-card .number {
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.element-card .symbol {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.element-card .name {
+    font-size: 0.65em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cat-nao-metal { background-color: var(--cat-nao-metal); }
+.cat-gas-nobre { background-color: var(--cat-gas-nobre); }
+.cat-alcalino { background-color: var(--cat-alcalino); }
+.cat-alcalino-terreo { background-color: var(--cat-alcalino-terreo); }
+.cat-semimetal { background-color: var(--cat-semimetal); }
+.cat-halogenio { background-color: var(--cat-halogenio); }
+.cat-transicao { background-color: var(--cat-transicao); }
+.cat-pos-transicao { background-color: var(--cat-pos-transicao); }
+.cat-lantanideo { background-color: var(--cat-lantanideo); }
+.cat-actinideo { background-color: var(--cat-actinideo); }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal-overlay.hidden {
+    display: none;
+}
+.modal-content {
+    background: var(--bg-secondary);
+    border: 4px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 2em;
+    cursor: pointer;
+}
+.modal-header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.modal-num { font-size: 1.2em; font-weight: bold; }
+.modal-sym { font-size: 3.5em; line-height: 1; }
+.category-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.modal-body p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.modal-footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}

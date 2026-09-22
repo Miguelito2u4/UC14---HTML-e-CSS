@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Periodic Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-default font-normal">
+
+    <header class="app-header">
+        <h1>Tabela Periódica Acessível</h1>
+        <p>Projetada para alta visibilidade e facilidade de leitura</p>
+    </header>
+
+    <section class="accessibility-bar" aria-label="Controles de Acessibilidade">
+        <div class="control-group">
+            <label for="theme-select">🎨 Tema de Cor:</label>
+            <select id="theme-select" onchange="changeTheme(this.value)">
+                <option value="theme-default">Padrão Escuro</option>
+                <option value="theme-high-contrast-yellow">Alto Contraste (Amarelo / Preto)</option>
+                <option value="theme-high-contrast-white">Alto Contraste (Branco / Preto)</option>
+                <option value="theme-light">Claro</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>🔍 Tamanho do Texto:</label>
+            <div class="btn-group">
+                <button onclick="changeFontSize('font-normal')" aria-label="Texto Normal">A</button>
+                <button onclick="changeFontSize('font-large')" aria-label="Texto Grande">A+</button>
+                <button onclick="changeFontSize('font-xlarge')" aria-label="Texto Muito Grande">A++</button>
+            </div>
+        </div>
+
+        <div class="control-group search-group">
+            <label for="search-input">🔎 Buscar Elemento:</label>
+            <input type="text" id="search-input" placeholder="Ex: Hidrogênio, Fe, 79..." oninput="filterElements()">
+        </div>
+    </section>
+
+    <section class="legend-container" aria-label="Legenda de Categorias">
+        <span class="legend-item cat-nao-metal">Não Metal</span>
+        <span class="legend-item cat-gas-nobre">Gás Nobre</span>
+        <span class="legend-item cat-alcalino">Metal Alcalino</span>
+        <span class="legend-item cat-alcalino-terreo">Alcalino-Térreo</span>
+        <span class="legend-item cat-semimetal">Semimetal</span>
+        <span class="legend-item cat-halogenio">Halogênio</span>
+        <span class="legend-item cat-transicao">Metal de Transição</span>
+        <span class="legend-item cat-pos-transicao">Pós-Transição</span>
+        <span class="legend-item cat-lantanideo">Lantanídeo</span>
+        <span class="legend-item cat-actinideo">Actinídeo</span>
+    </section>
+
+    <main class="table-container">
+        <div id="periodic-table" class="periodic-grid" role="region" aria-label="Tabela Periódica Interativa">
+        </div>
+    </main>
+
+    <div id="element-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()" aria-label="Fechar janela de detalhes">&times;</button>
+            
+            <div class="modal-header">
+                <span id="modal-number" class="modal-num">0</span>
+                <h2 id="modal-symbol" class="modal-sym">Xx</h2>
+                <h3 id="modal-name">Nome do Elemento</h3>
+                <span id="modal-category" class="category-badge">Categoria</span>
+            </div>
+
+            <div class="modal-body">
+                <p><strong>Massa Atômica:</strong> <span id="modal-mass">-</span> u</p>
+                <p><strong>Estado Físico:</strong> <span id="modal-state">-</span></p>
+                <p><strong>Configuração Eletrônica:</strong> <span id="modal-config">-</span></p>
+                <p class="description-text"><strong>Descrição:</strong> <span id="modal-desc">-</span></p>
+            </div>
+
+            <div class="modal-footer">
+                <button id="tts-btn" class="action-btn" onclick="speakElementDetails()">🔊 Ouvir Detalhes</button>
+                <button class="action-btn secondary" onclick="closeModal()">Fechar (Esc)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
