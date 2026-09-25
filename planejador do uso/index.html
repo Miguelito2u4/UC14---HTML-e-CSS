@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">meu planejador de uso</h1>
+        <h2>novo uso</h2>
+        <input type="text" id="qual é o usado" placeholder="digite o nome do pego">
+        <input type="text" id="tipo de uso" placeholder="digite o tipo de uso">
+        <select id="quantidade de uso">
+            <option value="">selecione a quantidade</option>
+            <option value="fraco">pequei leve</option>
+            <option value="normal">dei aquela brincada</option>
+            <option value="forte">negocio foi hard mesmo</option>
+
+        </select>
+        <button onclick="adicionaropego()">
+            adicionar esse pego
+        </button>
+
+        <button onclick="saidaquiusado()">
+            tirar esse usado
+        </button>
+        <p id="mensagem"></p>
+        <div class="contadores">
+            <p id="contador"> pegos cadastrados: 0</p>
+            <p id="contadorConcuidas"> pegos usado com sucesso : 0</p>
+        </div>
+        <button onclick="alterarmodo()">
+            modo aniquilação
+        </button>
+        <h2>Meu PEGOS</h2>
+        <div id="listapegos"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
