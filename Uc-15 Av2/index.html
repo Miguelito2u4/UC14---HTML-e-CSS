@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio AV2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header id="cabecalho">
+        <div class="container header-container">
+            <a href="#inicio" class="logo">Cerlan.classic</a>
+            
+            <button id="btn-menu" class="menu-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav id="menu" class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-acoes">
+                <a href="https://linktr.ee/miguelcerlan4" target="_blank" rel="noopener" class="link-topo">Linktree ↗</a>
+                <button id="btn-tema" class="btn-tema" aria-label="Alternar modo claro e escuro">🌙</button>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+    
+        <section id="inicio" class="hero">
+            <div class="container hero-container">
+                <div class="hero-texto">
+                    <span id="saudacao-dinamica" class="saudacao">Olá!</span>
+                    <h1>Oi, eu sou o <span class="destaque">Cerlan Miguel</span></h1>
+                    <p class="hero-sub">Eu programo para a web.</p>
+                    <p>Desenvolvedor front-end em formação pelo SENAC MedioTec, criando experiências digitais modernas, responsivas e acessíveis, aprendendo com a melhor TI do mercado, Professora Gaby Cortez</p>
+                </div>
+                <div class="hero-imagem">
+                    <div class="avatar-glow">
+                        <img src="img/avatar.jpeg" alt="Avatar ilustrativo representando o desenvolvedor" width="280" height="280">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="container secao">
+            <div class="sobre-titulo-tag">Sobre mim</div>
+            <h2>Minha hístoria com a TI</h2>
+            <div class="sobre-conteudo">
+                <p>Minha história com a tecnologia começou desde cedo: aos 7 anos de idade eu já mexia em computadores, desmontando e fuçando coisas na net. O que começou como uma simples curiosidade de criança virou uma motivação para que hoje eu curse Técnico em Desenvolvimento de Sistemas no SENAC MedioTec.</p>
+                <p>Busco transformar essa paixão de uma vida inteira em soluções reais de front-end. Meu objetivo atual é conquistar uma oportunidade de estágio onde eu possa unir minha bagagem, meus estudos em HTML, CSS, JavaScript e Figma, para criar interfaces incríveis e acessíveis para qualquer pessoa.</p>
+            </div>
+        </section>
+
+        <section id="habilidades" class="container secao">
+            <div class="sobre-titulo-tag">Minhas Habilidades</div>
+            <h2>O que eu sei fazer</h2>
+            <div class="habilidades-grid">
+                <article class="card-habilidade">
+                    <h3>HTML5 Semântico</h3>
+                    <div class="barra-progresso"><div class="progresso" style="width: 70%;"></div></div>
+                    <p class="nivel confortavel">Confortável (70%)</p>
+                </article>
+                <article class="card-habilidade">
+                    <h3>CSS3 & Flexbox/Grid</h3>
+                    <div class="barra-progresso"><div class="progresso" style="width: 40%;"></div></div>
+                    <p class="nivel evoluindo">Evoluindo (40%)</p>
+                </article>
+                <article class="card-habilidade">
+                    <h3>JavaScript (ES6+)</h3>
+                    <div class="barra-progresso"><div class="progresso" style="width: 55%;"></div></div>
+                    <p class="nivel aperfeiçoando">Se aperfeiçoando (55%)</p>
+                </article>
+                <article class="card-habilidade">
+                    <h3>Git & GitHub</h3>
+                    <div class="barra-progresso"><div class="progresso" style="width: 80%;"></div></div>
+                    <p class="nivel melhorando">Melhorando (80%)</p>
+                </article>
+                <article class="card-habilidade">
+                    <h3>Figma (UI/UX)</h3>
+                    <div class="barra-progresso"><div class="progresso" style="width: 85%;"></div></div>
+                    <p class="nivel maximizando">Maximizando (85%)</p>
+                </article>
+                <article class="card-habilidade">
+                    <h3>Responsividade & Acessibilidade</h3>
+                    <div class="barra-progresso"><div class="progresso" style="width: 75%;"></div></div>
+                    <p class="nivel dia">Melhorando cada dia mais (75%)</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projetos" class="container secao">
+            <div class="sobre-titulo-tag">PROJETOS EM DESTAQUE</div>
+            <h2>Meus Trabalhos Recentes</h2>
+            <div class="projetos-grid">
+                
+                <article class="card-projeto">
+                    <img src="img/projeto1.png" alt="Prévia do projeto Bom de Bolo no Figma" class="card-img-real">
+                    <div class="card-info">
+                        <h3>Bom de Bolo</h3>
+                        <p>Protótipo de alta fidelidade desenvolvido no Figma focado em experiência de usuário para confeitaria artesanal.</p>
+                        <div>
+                            <span class="tech-tag">Figma</span> 
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-projeto">
+                    <img src="img/projeto2.png" alt="Prévia do projeto Tabela Periódica Acessível" class="card-img-real">
+                    <div class="card-info">
+                        <h3>Tabela Periódica Acessível</h3>
+                        <p>Aplicação web inclusiva desenvolvida para auxiliar pessoas com deficiência visual na consulta química interativa.</p>
+                        <div>
+                            <span class="tech-tag">HTML5</span> 
+                            <span class="tech-tag">CSS3</span> 
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-projeto">
+                    <img src="img/projeto3.png" alt="Prévia do projeto Loja de Produtos Geek" class="card-img-real">
+                    <div class="card-info">
+                        <h3>Loja de Produtos Geek</h3>
+                        <p>E-commerce interativo com catálogo de produtos geek.</p>
+                        <div>
+                            <span class="tech-tag">HTML5</span> 
+                            <span class="tech-tag">CSS3</span> 
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contato" class="container secao">
+            <div class="sobre-titulo-tag" style="text-align: center;">VAMOS TRABALHAR JUNTOS</div>
+            <h2 style="text-align: center;">Tem um projeto em mente?</h2>
+            <p class="contato-sub">Estou sempre aberto a discutir novas oportunidades de estágio e projetos. Vamos conversar!</p>
+            
+            <form id="form-contato" novalidate>
+                <div class="grupo-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                    <span id="erro-nome" class="mensagem-erro"></span>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com">
+                    <span id="erro-email" class="mensagem-erro"></span>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="mensagem">Mensagem (mínimo de 20 caracteres):</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    <span id="erro-mensagem" class="mensagem-erro"></span>
+                </div>
+
+              
+
+                <button type="submit" class="btn-principal">Enviar Mensagem ↗</button>
+                <div id="sucesso-form" class="mensagem-sucesso" hidden>Mensagem enviada com sucesso! Obrigado pelo contato.</div>
+
+<div class="grupo-form checkbox-grupo">
+    <input type="checkbox" id="consentimento" name="consentimento">
+    <label for="consentimento"> Concordo que meus dados sejam usados apenas para contato. 
+    <a href="#" id="abrir-modal-lgpd">Saiba como tratamos seus dados (LGPD)</a>. </label>
+</div>
+
+<div id="modal-lgpd" class="modal-overlay" hidden>
+    <div class="modal-conteudo">
+        <h3>Política de Privacidade e LGPD</h3>
+        <p>Seus dados (nome, e-mail e mensagem) serão usados apenas para responder ao seu contato e não serão compartilhados com ninguém.</p>
+        <button id="fechar-modal-lgpd" class="btn-principal" type="button">Entendido</button>
+    </div>
+</div>
+</div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; <span id="ano-atual">2026</span> Cerlan Miguel. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#inicio" class="voltar-topo">Voltar ao topo ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
